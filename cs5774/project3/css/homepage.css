@@ -1,0 +1,173 @@
+.activity h3 {
+    margin-left: 3%;
+}
+
+.activity h2, .wrapped h2 {
+    margin-left: 2%;
+}
+
+.memory-content {
+    display: flex;
+    background-color: var(--default-background-color);
+    width: 90%;
+    margin-left: 3%;
+    border-radius: 10px;
+    padding: 15px;
+    gap: 80px;
+}
+
+/* plylist css, evntually move to another file */
+.playlist {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.song-item {
+    display: flex;
+    align-items: center;
+    background-color: #757575;
+    padding: 15px;
+    width: 110%;
+    height: 20%;
+    gap: 20px;
+    color: white;
+
+}
+
+.album-img {
+    height: 60px;
+    width: 60px;
+}
+
+.song-details p {
+    margin: 5px 0;
+}
+
+.song-title {
+    font-weight: 600;
+}
+
+/* memory details css */
+.memory-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.memory-title {
+    font-weight: 600;
+}
+
+.reactions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.comment-holder {
+    color: rgb(129, 127, 127);
+}
+
+.material-symbols-outlined.thumb {
+    font-size: 30px;
+}
+
+.wrapped-content {
+    display: flex;
+    align-items: center;
+    /* align-content: center; */
+    gap: 100px;
+}
+
+/* currenlty month wrapped (in process ver) */
+.monthly-wrapped {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--default-background-color);
+    width: 10%;
+    margin-left: 3%;
+    border-radius: 10px;
+    height: 25vh;
+}
+
+.cooking-wrap {
+    font-weight: 600;
+    font-size: large;
+    width: 80%;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.previous-wrapped {
+    display: flex;
+    gap: 30px;
+}
+
+.previous-wrapped img {
+    height: 11vw;
+    width: 10vw;
+}
+
+.wrapped-item .wrapped-date {
+    width: 100%;
+    margin: 5px 0 0;
+    text-align: center;
+}
+
+/* shouldnt need to show up on a full screen */
+#scroll-left, #scroll-right {
+    display: none;
+}
+
+
+/* when the width is 768px or smaller */
+@media (max-width: 768px) {
+
+    .memory-content {
+        margin-left: 5%;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .song-item {
+        width: 100%;
+    }
+
+    .memory-info .memory-title {
+        font-size: larger;
+    }
+
+    .memory-desc {
+        margin-top: 0;
+    }
+
+    .wrapped {
+        padding-bottom: 50px;
+    }
+
+    .wrapped-content {
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .monthly-wrapped {
+        width: 50%;
+        height: 30vh;
+        margin: 0;
+    }
+
+    /* previous wrapped will be part of a carosel */
+    .previous-wrapped {
+        display: none;
+    }
+
+    /* only show if there are multiple wrapped */
+    #scroll-left, #scroll-right {
+        display: block;
+        align-self: center;
+    }
+
+}

@@ -1,0 +1,66 @@
+/* when the width is 768px or smaller */
+@media (max-width: 768px) {
+    .modal-background, .memories-header {
+        display: none;
+    }
+
+    .memory-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .memory-container #scroll-left, #scroll-right {
+        display: hidden;
+    }
+
+    /* for static purposes temporarily remove all other memories */
+    #memories .item:nth-child(2) {
+        display: none;
+    }
+
+    #scroll-left, #scroll-right {
+        display: none;
+    }
+
+    .item .title {
+        display: none;
+    }
+
+    #memories .item img {
+        /* display: none; */
+        height: 90vw;
+        width: 80vw;
+    }
+
+    /* show the header that was hidden in big screen mode */
+    .edit-header {
+        display: block;
+        width: 100%;
+    }
+
+    .edit-header nav {
+        display: flex;
+        gap: 10px;
+        background-color: #d7d5d5;
+        padding: 10px;
+        border-radius: 30px;
+    }
+
+    #edit-cover, #edit-title, #edit-desc {
+        border: none;
+        font-size: medium;
+    }
+
+    #edit-title, #edit-desc {
+        background-color: transparent;
+    }
+
+    .visibility {
+        display: flex;
+    }
+
+    .material-symbols-outlined.unlock {
+        display: block;
+    }
+
+}

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memories</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="memories.css">
+    <link rel="stylesheet" href="addmemory.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+
+    <header>
+        <h1><a href="index.html">Monthly Wrapped</a></h1>
+        <span class="material-symbols-outlined hamburger">
+            menu
+        </span>
+        <nav>
+            <a href="homepage.html">
+                <span class="material-symbols-outlined">
+                    home
+                </span>
+                Home
+            </a>
+            <a class="selected" href="memories.html">
+                <span class="material-symbols-outlined">
+                    cognition_2
+                </span>
+                Memories
+            </a>
+            <a href="profile.html">
+                <span class="material-symbols-outlined">
+                    account_circle
+                </span>
+                Profile
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- like a nav bar but specifically for the memory portion/page -->
+        <div class="memories-header">
+            <!-- add button  -->
+            <a href="addmemory.html" id="add-memory">
+                <span class="add-label">Add Memory +</span>
+                <span class="material-symbols-outlined add-icon">
+                    add
+                </span>
+            </a>
+            <!-- title to represent where you are  -->
+            <h2>View all your memories here!</h2>
+            <!-- sorting options -->
+             <!-- TODO should this be a search box instead? -->
+              <div class="filtering">
+                <label for="filter">Sort By:</label>
+                <select name="filter" id="filter-dropdown">
+                    <option value="">Date</option>
+                    <option value="">Title (A-Z)</option>
+                    <!-- more options tbd -->
+                </select>
+              </div>
+        </div>
+        <!-- navigate through the users memories here  -->
+        <div class="memory-container">
+            <div id="scroll-left">
+                <span class="material-symbols-outlined">
+                    arrow_back_ios
+                </span>
+            </div>
+            <div id="memories">
+                <!-- where all the memory items go -->
+
+                 <div class="item">
+                    <a href="addmemory.html"><img src="images/don_toliver.png" alt="Red Concert Photo">
+                    <p class="title">Don Toliver Concert in San Antonio</p></a>
+                 </div>
+
+                <div class="item">
+                    <img src="images/memory-holder.png" alt="placeholder for default img">
+                    <p class="title">Placeholder Title</p>
+                </div>
+
+                <div class="item">
+                    <img src="images/memory-holder.png" alt="placeholder for default img">
+                    <p class="title">Placeholder Title</p>
+                </div>
+
+                <div class="item">
+                    <img src="images/memory-holder.png" alt="placeholder for default img">
+                    <p class="title">Placeholder Title</p>
+                </div>
+
+                <div class="item">
+                    <img src="images/memory-holder.png" alt="placeholder for default img">
+                    <p class="title">Placeholder Title</p>
+                </div>
+
+            </div>
+            <div id="scroll-right">
+                <span class="material-symbols-outlined">
+                    arrow_forward_ios
+                </span>
+            </div>
+
+            <div class="edit-header">
+                <nav>
+                    <button id="edit-cover" class="selected">Memory Cover</button>
+                    <button id="edit-title">Title</button>
+                    <button id="edit-desc" >Description</button>
+                </nav>
+            </div>
+
+            <div class="visibility">
+                <span class="material-symbols-outlined lock">
+                    lock
+                </span>
+
+                <span class="material-symbols-outlined unlock">
+                    lock_open
+                </span>
+            </div>
+
+            <div class="publicity">
+                <button id="edit-button">Cancel</button>
+                <button id="post-button">Post</button>
+            </div>
+        </div>
+        <!-- <span class="material-symbols-outlined">
+            page_control
+        </span> -->
+
+        <!-- WHATS NEW??? A MODAL!  -->
+         <div class="modal-background">
+
+             <div class="add-modal">
+
+                 <div class="add-modal-content">
+                     <span id="close-button" class="material-symbols-outlined">
+                         close
+                     </span>
+
+                     <!-- all the content for adding a memory is here -->
+                     <div class="edit-mode">
+
+                        <!-- left half : where the playlist will be -->
+                        <div class="memory-playlist">
+
+                            <div class="song-item">
+                                <img src="images/octane.png" alt="album cover" class="album-img">
+                                <div class="song-details">
+                                    <p class="song-title">Secondhand (feat. Rema)</p>
+                                    <p class="song-artists">Song • Don Toliver, Rema</p>
+                                </div>
+                            </div>
+
+                            <div class="song-item">
+                                <img src="images/octane.png" alt="album cover" class="album-img">
+                                <div class="song-details">
+                                    <p class="song-title">E85</p>
+                                    <p class="song-artists">Song • Don Toliver</p>
+                                </div>
+                            </div>
+
+                            <div class="song-item">
+                                <img src="images/octane.png" alt="album cover" class="album-img">
+                                <div class="song-details">
+                                    <p class="song-title">Gemstone</p>
+                                    <p class="song-artists">Song • Don Toliver</p>
+                                </div>
+                            </div>
+
+                            <button id="add-song">Add Songs +</button>
+
+                        </div>
+
+                        <!-- right half : where all the user input will go -->
+                        <div class="memory-details">
+                            <!-- ability to add more imgs tbd -->
+                             <h3>Memory Cover</h3>
+                            <img src="images/don_toliver.png" alt="Red concert photo">
+
+                            <p class="memory-name">Don Toliver Concert in San Antonio</p>
+                            <p class="memory-desc">He played all my favorites and the seats were amazing! I already wanna go back for leg 2.</p>
+
+                            <div class="post-options">
+                                <div class="visibility">
+                                    <span class="material-symbols-outlined lock">
+                                        lock
+                                    </span>
+
+                                    <span class="material-symbols-outlined unlock">
+                                        lock_open
+                                    </span>
+                                </div>
+
+                                <div class="publicity">
+                                    <button id="edit-button">Edit</button>
+                                    <button id="post-button">Post</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                     </div>
+
+
+                 </div>
+
+             </div>
+
+         </div>
+    </main>
+
+    <footer>
+        <div class="help">
+            <a href="">Help</a>
+            <a href="">Contact Us</a>
+        </div>
+    </footer>
+</body>
+</html>

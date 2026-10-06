@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Monthly Wrapped</title>
+    <script src="../js/jquery-4.0.0.min.js"></script>
+    <script src="../js/account.js"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/memories.css">
+    <link rel="stylesheet" href="../css/account.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">Monthly Wrapped</a></h1>
+        <span class="material-symbols-outlined hamburger">
+            menu
+        </span>
+        <nav>
+            <a>About</a> |
+            <a href="account.html">Sign Up</a>
+            <a href="account.html">Log In</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="account-form">
+            <!-- future TODO: will say something different for new users -->
+            <h3>Welcome Back</h3>
+            <form id="sign-in" action="">
+                <label for="username">Username:</label>
+                <input type="text" name="username" id="uname">
+                <label for="password">Password:</label>
+                <input type="text" name="password" id="pword">
+            </form>
+            <button id="continue-on" type="button">Continue</button>
+            <div class="errormsg"></div>
+            <p>Don't have an account?</p>
+            <a href="account.html">Sign up</a>
+        </div>
+
+
+    </main>
+
+    <footer>
+        <div class="help">
+            <a href="">Help</a>
+            <a href="">Contact Us</a>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,171 @@
+.no-memories {
+    display: none;
+    grid-column: 2 / 4;
+    grid-row: 3;
+    align-items: center;
+    text-align: center;
+    color: #999797;
+}
+
+#memory-search {
+    display: flex;
+    align-items: center;
+}
+
+#submit-search {
+    border: none;
+    background-color: transparent;
+}
+
+/* TODO should I move this to styles.css */
+nav a {
+    display: flex;
+    align-content: center;
+    gap: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+nav > .selected {
+    background-color: var(--default-background-color);
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.memories-header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#add-memory {
+    text-decoration: none;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: var(--default-background-color);
+}
+
+/* the + icon only displays for smaller screens */
+.material-symbols-outlined.add-icon {
+    display: none;
+}
+
+.memory-container {
+    display: flex;
+    padding: 3vw;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.memory-container img {
+    height: 13vw;
+    width: 12vw;
+    align-content: center;
+}
+
+.memory-container .item .title {
+    width: 12vw;
+    height: 1em;
+    margin: 8px auto 0;
+    text-align: center;
+    white-space: normal;
+    overflow-wrap: break-word;
+    justify-content: center;
+}
+
+#memories .item button {
+    background-color: transparent;
+    border: none;
+}
+
+#memories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 100px;
+}
+
+/* these will only be shown when there is more than one page of memories */
+#scroll-left, #scroll-right {
+    /* display: hidden; */
+    align-self: center;
+}
+
+
+/* add memory modal */
+
+
+/* only for small screen add memory mode */
+.edit-header {
+    display: none;
+}
+
+/* when the width is 768px or smaller */
+@media (max-width: 768px) {
+    .memories-header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .memories-header h2 {
+        order: 1;
+        flex: 0 0 100%; /* keep the text on the top */
+        font-size: large;
+        text-align: center;
+    }
+
+    /* hide the text from the button to save space  */
+    #add-memory .add-label {
+        display: none;
+    }
+
+    /* only show the add icon  */
+    .material-symbols-outlined.add-icon {
+        display: block;
+    }
+
+    #add-memory {
+        order: 2;
+        width: 15%;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .filtering {
+        order: 3;
+    }
+
+    #memories {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, auto);
+    }
+
+    #memories .item:nth-child(3),
+    #memories .item:nth-child(4),
+    #memories .item:nth-child(5) {
+        display: none;
+    }
+
+    .memory-container {
+        padding: 40px;
+    }
+
+    .item img {
+        height: 55vw;
+        width: 55vw;
+    }
+
+    .memory-container .item .title {
+        white-space: normal;
+        width: 55vw;
+        height: 2.8em;
+        overflow: hidden;
+        text-align: center;
+        line-height: 1.4;
+        overflow-wrap: break-word;
+    }
+}
