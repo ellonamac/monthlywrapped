@@ -4,6 +4,9 @@ $(document).ready(function(){
         let pword = $("#pword");
         let errormsgdiv = $(".errormsg");
         errormsgdiv.empty(); // clear out old error messages
+        // clear out old highlighted boxes
+        uname.removeClass("required");
+        pword.removeClass("required");
 
         var uerrormsg = $(`<p class>Username is required to log in<p>`);
         var perrormsg = $(`<p>Password is required to log in<p>`);
